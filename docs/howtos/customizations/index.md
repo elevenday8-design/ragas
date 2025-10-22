@@ -21,4 +21,5 @@ How to customize various aspects of Ragas to suit your needs.
 - [Configure or automatically generate Personas](testgenerator/_persona_generator.md)
 - [Customize single-hop queries for RAG evaluation](testgenerator/_testgen-custom-single-hop.md)
 - [Create custom multi-hop queries for RAG evaluation](testgenerator/_testgen-customisation.md)
+- [GraphRAG testset generation playbook](testgenerator/_graphrag_playbook.md)
 - [Seed generations using production data](testgenerator/index.md)

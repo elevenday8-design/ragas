@@ -345,7 +345,13 @@ class TestsetGenerator:
         4. Generate samples for each scenario.
         5. Compile the results into an EvaluationDataset.
         """
-        if run_config is not None:
+        if run_config is None:
+            existing_run_config = getattr(self.llm, "run_config", None)
+            if existing_run_config is None:
+                existing_run_config = RunConfig()
+                self.llm.set_run_config(existing_run_config)
+            run_config = existing_run_config
+        else:
             self.llm.set_run_config(run_config)
 
         query_distribution = query_distribution or default_query_distribution(
